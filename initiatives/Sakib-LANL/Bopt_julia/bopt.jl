@@ -9,10 +9,11 @@ using StaticArrays, LinearAlgebra
 using Statistics
 using Measurements # Useful for Error Propagation (when relevant)
 
-# Here, we set up PyCall.jl
+# Here, we set up PyCall.jl 
+# Review the readme.md for instructions on setting up python packages.
 using Pkg
-# We can use a pre-defined conda (a popular package manager for python) environment. 
-ENV["PYTHON"] = "/vast/home/smatin/.conda/envs/MBO/bin/python3"
+# (Optional) Use pre-defined conda environment. 
+# ENV["PYTHON"] = "/vast/home/smatin/.conda/envs/bopt/bin/python3"
 Pkg.build("PyCall") # TODO automate checks of re-building if needed. 
 using PyCall
 
